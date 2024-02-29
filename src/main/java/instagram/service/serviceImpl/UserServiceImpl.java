@@ -43,7 +43,7 @@ public class UserServiceImpl implements UserService {
         return userRepository.searchUsers("%" + keyword + "%");
     }
     @Override
-    public void updateUser(Long id, User user) {
+    public void   updateUser(Long id, User user) {
         User foundUser = findById(id);
         foundUser.setUserName(user.getUserName());
         foundUser.setEmail(user.getEmail());

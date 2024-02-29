@@ -408,9 +408,9 @@
                         <a th:href="@{/home/someUser/{userId}/{otherId}(userId=${userId},otherId=${currentUser.getId()})}">
                             <h2 th:text="${currentUser.userName}"></h2></a>
                         <div class="edit-profile">
-                            <form th:action="@{/home/subscriber/{userId}/{otherId}(userId=${userId},otherId=${currentUser.getId()})}" th:method="get">
-                                <button type="submit" class="subscribe-btn">Subscribe</button>
-                            </form>
+<!--                            <form th:action="@{/home/subscriber/{userId}/{otherId}(userId=${userId},otherId=${currentUser.getId()})}" th:method="get">-->
+<!--                                <button type="submit" class="subscribe-btn">Subscribe</button>-->
+<!--                            </form>-->
                         </div>
                     </div>
                     <div class="stats">
