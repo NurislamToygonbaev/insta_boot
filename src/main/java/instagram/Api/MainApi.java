@@ -30,6 +30,7 @@ public class MainApi {
     public String profilePage(Model model, @PathVariable Long userId) {
 
         try {
+
             User cerruntUser = userService.findById(userId);
             Long id = cerruntUser.getId();
             int subscribers = followerService.getNumberOfSubscribers(id);
@@ -38,6 +39,7 @@ public class MainApi {
             Collections.reverse(posts);
             model.addAttribute("subscribers", subscribers);
             model.addAttribute("posts", posts);
+
             model.addAttribute("subscriptions", subscriptions);
             model.addAttribute("currentUser", cerruntUser);
             model.addAttribute("userId", id);
