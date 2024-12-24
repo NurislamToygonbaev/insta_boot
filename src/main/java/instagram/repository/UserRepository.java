@@ -9,10 +9,11 @@ import java.util.List;
 @Repository
 public interface UserRepository extends JpaRepository<User, Long> {
     @Query(""" 
-            select u from User u
-                        where u.userName ilike (:keyword)
-                        or u.email ilike (:keyword)
-                        or u.userInfo.fullName ilike (:keyword)
+            select u from User u join UserInfo ui
+                                on u.userInfo = ui
+                                where u.userName ilike :keyword
+                                or u.email ilike :keyword
+                                or ui.fullName ilike :keyword
                         """)
     List<User> searchUsers(String keyword);
 

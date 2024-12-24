@@ -30,17 +30,13 @@ public class PostServiceImpl implements PostService {
         Like like = new Like();
         newPost.setLike(like);
 
-        // Проходимся по всем изображениям в новом посте
         for (Image image : newPost.getImages()) {
-            // Связываем изображение с постом
             image.setPost(newPost);
         }
 
-        // Добавляем новый пост к пользователю
         user.getPosts().add(newPost);
         newPost.setUser(user);
 
-        // Сохраняем пост в репозитории
         postRepository.save(newPost);
     }
 

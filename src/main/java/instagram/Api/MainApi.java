@@ -28,6 +28,7 @@ public class MainApi {
     private final FollowerService followerService;
     @GetMapping("/profUser/{userId}")
     public String profilePage(Model model, @PathVariable Long userId) {
+
         try {
             User cerruntUser = userService.findById(userId);
             Long id = cerruntUser.getId();
