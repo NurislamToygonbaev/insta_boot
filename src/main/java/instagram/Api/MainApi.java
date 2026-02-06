@@ -23,9 +23,13 @@ import java.util.List;
 @RequestMapping("/home")
 @RequiredArgsConstructor
 public class MainApi {
+
     private final UserService userService;
+
     private final PostService postService;
+
     private final FollowerService followerService;
+
     @GetMapping("/profUser/{userId}")
     public String profilePage(Model model, @PathVariable Long userId) {
 
