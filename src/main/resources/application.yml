@@ -1,11 +1,11 @@
 spring:
     datasource:
-        url: jdbc:postgresql://localhost:5432/insta_boot
+        url: jdbc:postgresql://localhost:5432/instagram
         username: postgres
-        password: rootroot
+        password: postgres
     jpa:
         hibernate:
-            ddl-auto: update
+            ddl-auto: create
         show-sql: true
 
 #    flyway:

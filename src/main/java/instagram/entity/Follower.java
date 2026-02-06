@@ -14,6 +14,7 @@ import java.util.List;
 @AllArgsConstructor
 @Builder
 public class Follower{
+
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "follower_gen")
     @SequenceGenerator(name = "follower_gen", sequenceName = "follower_seq", allocationSize = 1)
