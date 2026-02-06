@@ -47,6 +47,8 @@ public class UserServiceImpl implements UserService {
         User foundUser = findById(id);
         foundUser.setUserName(user.getUserName());
         foundUser.setEmail(user.getEmail());
+
+
         foundUser.setPassword(user.getPassword());
         UserInfo userInfo = foundUser.getUserInfo();
         userInfo.setBiography(user.getUserInfo().getBiography());
